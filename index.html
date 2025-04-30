@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="500x500"
+      href="/assets/favicon_500-ad5f98bf.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,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"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unleash Your Inner Hero!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    
+    <script type="module" crossorigin src="/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modal-116735f3.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-0d4ab8a2.js">
+    <link rel="stylesheet" href="/assets/modal-3689a3a5.css">
+    <link rel="stylesheet" href="/assets/vendor-0ded8c46.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/"
+      ><img class="header-logo" src="/assets/logo-4ea54b2e.png" alt="Image logo jsh"
+    /></a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About Joy Storm Hero</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#our" class="nav-link">Our Programs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#why" class="nav-link">Why Choose Us?</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#join" class="nav-link">Join the Academy</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="header-burger" data-modal-open>
+      <img
+        width="24"
+        height="16"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAkCAYAAADGrhlwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABhSURBVHgB7ddBDYBADETRAQwgAQk4qg7UcuZEHUAhK6Jt/ktms9cevyRZ7I49xXd+t0zjs6kHn+NZ1Ycv8VyxXfUP89ghAAAAlGaih9KihzKjhwAAABow0UNp0UOZ/T30AhGYp6okZxL5AAAAAElFTkSuQmCC"
+        alt="Burger button"
+        class="header-burger-img"
+      />
+    </button>
+  </div>
+</header>
+
+    <div id="modal" class="backdrop is-hidden" data-backdrop>
+  <div class="modal">
+    <nav class="modal-nav is-hidden" data-modal>
+      <ul class="modal-nav-list">
+        <li class="modal-nav-item">
+          <a href="/" class="modal-nav-link">Home</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#about" class="modal-nav-link">About Joy Storm Hero</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#our" class="modal-nav-link">Our Programs</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#why" class="modal-nav-link">Why Choose Us?</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#testimonials" class="modal-nav-link">Testimonials</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#join" class="modal-nav-link">Join the Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+    <section class="hero">
+  <div class="hero-wrapper-dop">
+    <div class="hero-wrapper">
+      <div class="hero-wrap-text">
+        <h1 class="hero-title">Unleash Your Inner Hero!</h1>
+        <p class="hero-text">
+          Empowering kids and teens with strength, discipline and confidence.
+        </p>
+      </div>
+
+      <div class="hero-wrap-img">
+        <picture class="hero-image">
+          <source
+            srcset="/assets/hero-superman-desk-f88d33b3.png "
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="/assets/hero-superman-mob-2a9f99ea.png "
+            media="(max-width: 1439px)"
+          />
+          <img src="/assets/hero-superman-mob-2a9f99ea.png" alt="Superman image" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="about" class="about">
+  <div class="container about-wrap-container">
+    <div class="about-wrap">
+      <div class="about-wrap-text">
+        <h2 class="about-wrap-title">About Joy Storm Hero</h2>
+        <img src="/assets/about-boom-7da57ec7.png" class="about-wrap-img" />
+      </div>
+
+      <div class="about-wrap-content">
+        <div class="about-wrap-content-one">
+          <div class="about-content">
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-desk"
+            />
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVkAAACwCAYAAAClzh0lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAbxSURBVHgB7d3Rdds2FAZgOqfvUiYQs4G7QbxBRugKmaAjZISO0o7QDUxNIGmDmjqRStEEQZAE5Yjfdw4dAjSdtz83FxD8VAA8trJnvP159X3/LuHnNcdP9ZffCoB8YiE2NeSGvH9XQhYe29SQ2xTTQ3KNqsvNUwHk1A6h1HFqyHWF3qqVZTlpvNvtBn1/VVXFy8tL0aaS5dHNHXKp76/adrs9X03NkIo9r/WF3JD3703IklvZGrdDKPY8FnJl5P1Vmxpym81mckiuRV3Jdk0L2cdXtsapIbWb+P6qpYZce5wacl1/H/clZPMrW+NYSLXHqSHXHq9aLIRSQy71fVhDyJYTx2P3yFHEQ6j9X8vUkIu9D0s5nU5d04u0C8qe8cPvkbu3WAjFnrcXHYQcdDscDp3zdcj+0ZorG/f2yE2UGnKxlVUhB7+WOmT/Kh7YUnvkQmNg3eqQrYqM1WdfCE3dIzdkDLCE/X7fNX3bk/327Vvx/Px8HdsjBzDNTcj++PFDSALM6NPbdbwMjsdjAUC6QH7uhSzADEL5+akAIJs6ZK9LYoHVMQAiApXsUSULMAMhC3AHNwtfgfMQARjneBOyAIyjXQCQUegUrjpkq8tAuwBgXipZgBkEDu3WLgCYQ6Ane/CxWoCMhCxAPiftAoCJejYNHO0uAMhIJQuQkZAFmCiwnlXVX5xdADBR36YBZxcAZKRdAJDHuYC9hGx1mdUyAEgTyM2bkAUgAyELkNElZH20FmCkwAlcVf1FyAJMFNvCBUAml5DdXyb2+30BwGTnHoJKFmAiW7gA7uTdwpcPIwDM513IApAmUJyeJ7ULADJydgFARipZgDyq+ouQBZjo9fU1+MzHagEyErIAGWkXAEwUOI7g3EOwuwAgI5UsQEZCFmCCnnWscw/BwhfABLHMFLIAGWkXAMzvWq02Q7a63thhADBI34HdNZUsQEZCFiCjZsha/AJIdDqduqary42QBZjgcDj0PtcuAMioGbLXEw4Chx0AMMy1h6CSBZggUJReewhCFiAjC18AGQlZgAkCeXntIWgXAEww9BSu8/debpxdADCPzpAFYJhAJeuAGIA5pISshS+AmQlZgPlpFwDMIaVdUF1v7C4AGMQpXAB3JGQBJggc2m13AcAcAnnZeQqXkAWYmXYBwPyCh3Y7vwBgoJ6cDO6T1ScAmJF2AUBGwUrW4hdAv0C74GZSyAJkpF0AkFE7ZK+/lybwa24B6HfTBlDJAowU6MkKWYClWPgCyEjIAowUWLuqmgPtAoCMnF0AkJGzCwDmdXOKt3YBwEhjtnBZ+AKYkZAFyEi7AGCkMadwVZGXAUigkgXISMgCjBRYu6qaAwtfACMdDofo9whZgIy0CwAy6gpZ1SzAAIFTuF6bAyELkJF2AUBGKlmAEXry8aaHIGQBRhiaj9oFABl1hey11A2snAGsXqCSfTepkgUYQcgCfAAWvgDmM6iSFbIAEafTqWtauwBgDkNO4KqpZAEyErIAIwTaBe8mtQsARggUoe96CCpZgIyELMB8tAsA5lBVVdf0oC1cVeSHADCQShYgIyELMMKUA2IsfAFECFmAD0C7AGA+gw+IUc0C9Hh9fe2aFrIAS9IuAMhIJQswQuAUrnc9BCELMMLQbNQuAMgoWsnu9/sCgEEGn8J1KgDo1HN4ll+kCLAkC18AGQlZgESBdkHnpHYBQEYqWYCMhCzAPKquSe0CgEQpv/9QJQuQkZAFyEi7ACBR4LiBqmsyWsmm9B4AuBUNWQDG0y4ASBRYq+rsIVj4AkiUkotCFiAj7QKAeXRWpJ+GvKCaBfhfYNeVkAVYmnYBQEa/9Ty7lq/fv38vnp+fbx7udrvr/Xa7PV9NZVn2Pgf4VQX+d191TT4VYX+/XV+LDNqh2wzkIeO+gI+NAaaqM6njo7Uvb9c/7cm+Sjab+l+B5r8ES350d8mAb78LrE9fJfv17Srfrj9//slEKYHeFeCbzab3uYCHZQQq2d/frn/bk30he5GtbcByBDzM5+mpMzrLouOjtXdpF7C8dktmyRZNbBE0JeDbAS7g+eiGVLJfi9t2Qdl6vmvcb39eQ8eQlYAnh5RKdkjI5tQO3bL1PDYW8HxYAv4x1Yv2nz9/7nr0NHhyJVICviuwN5HnfT8bssoZ8LHxo6tbbV++fOl61Jmna+7JHovbzxpXxXLKhLGAJ9k9f6NJLMBj40cLeAtf91FFxjmVCeNYwLffFfA8fMCnHA5TW3O7gOWVjfuuHnnfcwHPR1a9XZ09BJUsS6qK+ykb9wKexQhZ1qIq7qds3Av4xxRsFwhZyK8q7qds3Kduc4wFfGy8JkIWVqoq7qds3K824IUskEtV3E/ZuE/d5rjr+Vmxn/3Ofwq9pVXx7AD/AAAAAElFTkSuQmCC"
+              alt="Wrapper image"
+              class="about-content-img-mob"
+            />
+            <div class="wrap-content wrap-content--one">
+              <p class="about-content-title">Our Mission</p>
+              <p class="about-content-text">
+                To inspire young people to develop strength, resilience, and
+                confidence through the discipline of martial arts.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-desk"
+            />
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-mob"
+            />
+            <div class="wrap-content wrap-content--two">
+              <p class="about-content-title">Core Values</p>
+              <p class="about-content-text">
+                Respect, self-control, perseverance, and leadership.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-wrap-content-two">
+          <div class="about-content">
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-desk"
+            />
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-mob"
+            />
+            <div class="wrap-content wrap-content--three">
+              <p class="about-content-title">The Joy Storm Hero Difference</p>
+              <p class="about-content-text">
+                Unlike traditional martial arts schools, our academy integrates
+                a modern approach, blending structured training with an engaging
+                and motivating atmosphere.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-desk"
+            />
+            <img
+              src="data:image/png;base64,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"
+              alt="Wrapper image"
+              class="about-content-img-mob"
+            />
+            <div class="wrap-content wrap-content--four">
+              <p class="about-content-title">Student Development</p>
+              <p class="about-content-text">
+                Our training is designed to help students excel in focus,
+                teamwork, and self-discipline while also improving physical
+                fitness and agility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="our" class="our">
+  <div class="container our-wrap-container">
+    <div class="our-wrap">
+      <h2 class="our-wrap-title">Our Programs</h2>
+
+      <div class="dop-wrap-context">
+        <div class="our-content">
+          <img
+            src="/assets/our-one-desk2-cbb0fae1.png"
+            alt="Wrapper image"
+            class="our-content-img-desk"
+          />
+          <img
+            src="/assets/our-one-mob2-9dce05ac.png"
+            alt="Wrapper image"
+            class="our-content-img-mob"
+          />
+          <div class="our-wrap-content our-wrap-content--one">
+            <p class="our-content-title">Super Kickers (Ages 5-7)</p>
+            <p class="our-content-text">
+              A playful yet structured introduction to martial arts, focusing on
+              coordination, balance, and basic self-defense techniques. Kids
+              learn through interactive games, simple drills, and positive
+              reinforcement.
+            </p>
+          </div>
+        </div>
+
+        <div class="our-content">
+          <img
+            src="/assets/our-two-desk2-1793e4c1.png"
+            alt="Wrapper image"
+            class="our-content-img-desk"
+          />
+          <img
+            src="/assets/our-two-mob2-7dd5e018.png"
+            alt="Wrapper image"
+            class="our-content-img-mob"
+          />
+          <div class="our-wrap-content our-wrap-content--two">
+            <p class="our-content-title">Warrior Juniors (Ages 8-12)</p>
+            <p class="our-content-text">
+              A more structured program that builds fundamental martial arts
+              techniques, discipline, and self-confidence. Students start
+              practicing kata, controlled sparring, and flexibility training
+            </p>
+          </div>
+        </div>
+
+        <div class="our-content our-content-dop">
+          <img
+            src="/assets/our-three-desk2-458d1f08.png"
+            alt="Wrapper image"
+            class="our-content-img-desk"
+          />
+          <img
+            src="/assets/our-three-mob2-4fad4bf3.png"
+            alt="Wrapper image"
+            class="our-content-img-mob"
+          />
+          <div class="our-wrap-content our-wrap-content--three">
+            <p class="our-content-title">Teen Fighters (Ages 13-17)</p>
+            <p class="our-content-text">
+              A dynamic program designed to refine techniques, enhance strength,
+              and develop tactical combat skills. This program incorporates
+              advanced self-defense strategies, endurance training, and mental
+              exercises.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="our-wrap-image">
+        <picture class="our-wrap-image-cap">
+          <source
+            srcset="/assets/our-captain-desk-bd12fd2d.png "
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="/assets/our-captain-mob-949946b3.png "
+            media="(max-width: 1439px)"
+          />
+          <img src="/assets/our-captain-mob-949946b3.png" alt="Captain image" />
+        </picture>
+
+        <picture class="our-wrap-image-vrooom">
+          <source
+            srcset="/assets/our-vrooom-desk-866df365.png "
+            media="(min-width: 1440px)"
+          />
+          <source
+            srcset="/assets/our-vrooom-mob-f3fd152e.png "
+            media="(max-width: 1439px)"
+          />
+          <img src="/assets/our-vrooom-mob-f3fd152e.png" alt="Vrooom image" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="why" class="why">
+  <div class="container why-wrap-container">
+    <div class="why-wrap">
+      <div class="why-wrap-text">
+        <h2 class="why-wrap-title">Why Choose Us?</h2>
+        <picture class="why-wrap-image-wow">
+          <source srcset="/assets/why-desk-2f1ed966.png " media="(min-width: 1440px)" />
+          <source srcset="/assets/why-mob-c48058ee.png " media="(max-width: 1439px)" />
+          <img src="/assets/why-mob-c48058ee.png" alt="Why choose us image" />
+        </picture>
+      </div>
+
+      <div class="why-wrap-content">
+        <div class="why-container-one">
+          <div class="why-container">
+            <picture class="why-wrap-image-wow">
+              <source
+                srcset="/assets/why-cloud-desk1-d6d953e7.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/why-cloud-mob1-26f7669f.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/why-cloud-mob1-26f7669f.png"
+                alt="Why choose us image cloud"
+              />
+            </picture>
+            <div class="why-wrap-content-text-one">
+              <p class="why-wrap-content-text-title">Expert Instructors</p>
+              <p class="why-wrap-content-text-deskription">
+                Our team consists of highly trained professionals with years of
+                experience in martial arts and youth training.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-container">
+            <picture class="why-wrap-image-wow">
+              <source
+                srcset="/assets/why-cloud-desk2-771f7beb.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/why-cloud-mob2-d464d3c3.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/why-cloud-mob2-d464d3c3.png"
+                alt="Why choose us image cloud"
+              />
+            </picture>
+            <div class="why-wrap-content-text-two">
+              <p class="why-wrap-content-text-title">
+                Safe and Supportive Environment
+              </p>
+              <p class="why-wrap-content-text-deskription">
+                We prioritize safety and inclusivity, ensuring that every
+                student feels comfortable and motivated to learn.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-container-two">
+          <div class="why-container">
+            <picture class="why-wrap-image-wow">
+              <source
+                srcset="/assets/why-cloud-desk3-d568e43a.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/why-cloud-mob2-d464d3c3.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/why-cloud-mob2-d464d3c3.png"
+                alt="Why choose us image cloud"
+              />
+            </picture>
+            <div class="why-wrap-content-text-three">
+              <p class="why-wrap-content-text-title">
+                Progressive Learning Structure
+              </p>
+              <p class="why-wrap-content-text-deskription">
+                Each program is tailored to match the developmental needs of
+                different age groups, making learning both effective and
+                enjoyable.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-container">
+            <picture class="why-wrap-image-wow">
+              <source
+                srcset="/assets/why-cloud-desk4-cd77a010.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/why-cloud-mob1-26f7669f.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/why-cloud-mob1-26f7669f.png"
+                alt="Why choose us image cloud"
+              />
+            </picture>
+            <div class="why-wrap-content-text-four">
+              <p class="why-wrap-content-text-title">Heroic Mindset</p>
+              <p class="why-wrap-content-text-deskription">
+                We instill the mindset of perseverance, discipline, and
+                integrity, shaping students to be real-life heroes in their
+                communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="testimonials" class="testimonials">
+  <div class="container testimonials-wrap-container">
+    <div class="testimonials-wrap">
+      <div class="testimonials-wrap-text">
+        <h2 class="testimonials-wrap-title">Testimonials</h2>
+
+        <div class="testimonials-wrapper swiper reviewsSwiper">
+          <div class="swiper-wrapper">
+            <div class="testimonials-wrap-content swiper-slide">
+              <div>
+                <picture class="content-cloud">
+                  <source
+                    srcset="/assets/test-cloud-desk-4afa931a.png "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="/assets/test-cloud-mob-da2d01b1.png "
+                    media="(max-width: 1439px)"
+                  />
+                  <img
+                    src="/assets/test-cloud-mob-da2d01b1.png"
+                    alt="Testimonials image cloud"
+                  />
+                </picture>
+                <p class="content-text-one">
+                  "My son has become more confident and disciplined thanks to
+                  Joy Storm Hero! He used to be very shy, but now he’s learning
+                  how to stand up for himself."
+                </p>
+              </div>
+              <p class="content-text-name-one">Sarah K.</p>
+            </div>
+
+            <div class="testimonials-wrap-content swiper-slide">
+              <div>
+                <picture class="content-cloud">
+                  <source
+                    srcset="/assets/test-cloud-desk-4afa931a.png "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="/assets/test-cloud-mob-da2d01b1.png "
+                    media="(max-width: 1439px)"
+                  />
+                  <img
+                    src="/assets/test-cloud-mob-da2d01b1.png"
+                    alt="Testimonials image cloud"
+                  />
+                </picture>
+                <p class="content-text-two">
+                  "The instructors are amazing! They know how to push students
+                  to their limits while making sure they are always having fun."
+                </p>
+              </div>
+              <p class="content-text-name-two">David M.</p>
+            </div>
+
+            <div class="testimonials-wrap-content swiper-slide">
+              <div>
+                <picture class="content-cloud">
+                  <source
+                    srcset="/assets/test-cloud-desk-4afa931a.png "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="/assets/test-cloud-mob-da2d01b1.png "
+                    media="(max-width: 1439px)"
+                  />
+                  <img
+                    src="/assets/test-cloud-mob-da2d01b1.png"
+                    alt="Testimonials image cloud"
+                  />
+                </picture>
+                <p class="content-text-three">
+                  "Enrolling my daughter in this academy was the best decision
+                  we made. She has developed great self-defense skills and a lot
+                  more focus in school."
+                </p>
+              </div>
+              <p class="content-text-name-three">Emily T.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap-arrow">
+          <img
+            class="arrow-left"
+            src="data:image/png;base64,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"
+            alt="Image arrow left"
+          />
+          <img
+            class="arrow-right"
+            src="data:image/png;base64,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"
+            alt="Image arrow right"
+          />
+        </div>
+      </div>
+
+      <picture class="testimonials-wrap-image-boom">
+        <source
+          srcset="/assets/test-girl-desk-860230ea.png "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/assets/test-girl-mob-d2c19b58.png "
+          media="(max-width: 1439px)"
+        />
+        <img src="/assets/test-girl-mob-d2c19b58.png" alt="Image woman wow" />
+      </picture>
+    </div>
+  </div>
+</section>
+
+    <section id="join" class="join">
+  <div class="container join-wrap-container">
+    <div class="join-wrap">
+      <div class="join-wrap-text">
+        <h2 class="join-wrap-title">Join the Academy</h2>
+
+        <div class="join-wrap-content">
+          <p class="join-content-title">How to Get Started</p>
+          <p class="join-content-text">
+            Details on class schedules, trial sessions, and membership options.
+          </p>
+
+          <p class="join-content-title">Visit Our Academy</p>
+          <p class="join-content-text">
+            Information on location, training hours, and what to expect on the
+            first visit.
+          </p>
+
+          <p class="join-content-title">Contact Us:</p>
+          <p class="join-content-text-dop">
+            Reach out via email or phone for inquiries about programs and
+            enrollment.
+          </p>
+          <p class="join-content-text-dop">
+            <a class="join-tel" href="tel:+905063074695">+905063074695</a>
+          </p>
+          <p class="join-content-text">
+            <a class="join-mail" href="mailto:info@joystormhero.com"
+              >info@joystormhero.com.</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <picture class="join-wrap-image-boom">
+        <source
+          srcset="/assets/join-desk-1x-749bffa9.png "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/assets/join-mob-1x-96f3b01e.png "
+          media="(max-width: 1439px)"
+        />
+        <img src="/assets/join-mob-1x-96f3b01e.png" alt="Image superman" />
+      </picture>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+  <div class="footer-wrap">
+    <img
+      class="footer-img"
+      src="/assets/footer-superman-790859c3.png"
+      alt="Image footer"
+    />
+
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <a href="./privacy-policy.html" class="footer-nav-link"
+          >Privacy policy</a
+        >
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="./terms.html" class="footer-nav-link">Terms and Conditions</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="./cookies.html" class="footer-nav-link">Cookies Policy</a>
+      </li>
+    </ul>
+
+    <p class="footer-text">All rights reserved joystormhero.com | 2025</p>
+  </div>
+</footer>
+
+    <div id="modal-cookies" class="backdrop is-hidden" data-backdrop>
+  <div class="modal-cookies">
+    <div class="modal-cookies-text-wrap">
+      <p class="modal-cookies-text">
+        We use cookies to improve your experience on our website. By browsing
+        this website, you agree to our use of cookies.
+      </p>
+    </div>
+    <div class="modal-cookies-dop-btn">
+      <button type="button" class="modal-cookies-accept">Accept Cookies</button>
+      <button type="button" class="modal-cookies-decline">
+        Decline Cookies
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    
+    
+    
+  </body>
+</html>
