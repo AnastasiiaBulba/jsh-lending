@@ -1,0 +1,190 @@
+@import './common/vars';
+
+.why {
+  scroll-margin-top: 80px;
+}
+
+.why-wrap-container {
+  background-color: $_orange;
+  background-image: url('../img/why/why-background-mob.png');
+  background-size: cover;
+  background-position: center;
+  padding-left: 16px;
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+
+.why-wrap-text {
+  display: flex;
+  align-items: center;
+}
+
+.why-wrap-title {
+  font-family: $_second-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #fff82a 0%, #ff3c00 45%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(1px 0 0 $_black) drop-shadow(-1px 0 0 $_black)
+    drop-shadow(0 1px 0 $_black) drop-shadow(0 -1px 0 $_black)
+    drop-shadow(2px 4px 0 $_black);
+  padding-bottom: 40px;
+}
+
+.why-wrap-image-wow {
+  position: relative;
+  width: 134px;
+}
+
+.why-wrap-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.why-container-one {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.why-wrap-content-text-one {
+  position: absolute;
+  transform: translate(1%, -124%);
+  padding-top: 32px;
+  padding-left: 32px;
+  width: 279px;
+  text-align: center;
+}
+
+.why-wrap-content-text-two {
+  position: absolute;
+  transform: translate(1%, -126%);
+  padding-top: 32px;
+  padding-left: 32px;
+  width: 279px;
+  text-align: center;
+}
+
+.why-wrap-content-text-three {
+  position: absolute;
+  transform: translate(1%, -116%);
+  padding-top: 32px;
+  padding-left: 32px;
+  width: 279px;
+  text-align: center;
+}
+
+.why-wrap-content-text-four {
+  position: absolute;
+  transform: translate(1%, -126%);
+  padding-top: 32px;
+  padding-left: 32px;
+  width: 279px;
+  text-align: center;
+}
+
+.why-wrap-content-text-title {
+  font-family: $_font-family;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-bottom: 8px;
+}
+
+.why-wrap-content-text-deskription {
+  font-family: $_font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 279px;
+}
+
+.why-container-two {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 1440px) {
+  .why-wrap-container {
+    background-color: $_orange;
+    background-image: url('../img/why/why-background-desk.png');
+    background-size: cover;
+    background-position: center;
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+
+  .why-wrap-text {
+    position: relative;
+  }
+
+  .why-wrap-title {
+    font-size: 56px;
+    background: linear-gradient(180deg, #fff82a 0%, #ff3c00 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    margin-top: 60px;
+    margin-bottom: 62px;
+    padding-right: 89px;
+  }
+
+  .why-wrap-image-wow {
+    transform: translate(1%, -10%);
+    width: 205px;
+  }
+
+  .why-wrap-content {
+    gap: 32px;
+  }
+
+  .why-container-one {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .why-container-two {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .why-wrap-content-text-one {
+    transform: translate(1%, -134%);
+    width: 480px;
+  }
+
+  .why-wrap-content-text-two {
+    transform: translate(1%, -128%);
+    width: 480px;
+  }
+
+  .why-wrap-content-text-three {
+    transform: translate(1%, -122%);
+    width: 480px;
+  }
+
+  .why-wrap-content-text-four {
+    transform: translate(1%, -124%);
+    width: 480px;
+  }
+
+  .why-wrap-content-text-title {
+    width: 480px;
+    font-size: 20px;
+  }
+
+  .why-wrap-content-text-deskription {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 480px;
+  }
+}

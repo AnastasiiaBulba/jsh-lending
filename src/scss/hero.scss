@@ -1,0 +1,123 @@
+@import './common/vars';
+
+.hero {
+  margin-bottom: 4px;
+}
+
+.hero-wrapper-dop {
+  background: radial-gradient(
+    92.98% 85.08% at 73.09% 56.46%,
+    #81bdff 0%,
+    #499fff 100%
+  );
+  background-size: cover;
+  background-position: center;
+  width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-wrapper {
+  background-image: url('../img/hero/hero-background-mob.png');
+  background-size: cover;
+  background-position: center;
+  width: 375px;
+  padding-top: 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 109px;
+}
+
+.hero-wrap-text {
+  order: 2;
+  margin-top: 10px;
+  padding-left: 16px;
+}
+
+.hero-title {
+  font-family: $_second-family;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.2;
+  color: $_orange;
+  filter: drop-shadow(1px 0 0 $_black) drop-shadow(-1px 0 0 $_black)
+    drop-shadow(0 1px 0 $_black) drop-shadow(0 -1px 0 $_black)
+    drop-shadow(2px 4px 0 $_black);
+}
+
+.hero-text {
+  font-family: $_second-family;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  color: $_white;
+  margin-top: 40px;
+  text-shadow: 1px 0 $_black, 0 1px $_black, -1px 0 $_black, 0 -1px $_black;
+}
+
+.hero-wrap-img {
+  order: 1;
+  padding-left: 42px;
+}
+
+.hero-image img {
+  width: 327px;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-wrapper-dop {
+    width: 1440px;
+    padding-top: 80px;
+  }
+
+  .hero-wrapper {
+    background-image: url('../img/hero/hero-background-desk.png');
+    background-size: cover;
+    background-position: center;
+    width: 1440px;
+    height: 632px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-top: 124px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .hero-wrap-text {
+    z-index: 2;
+    padding-left: 0;
+  }
+
+  .hero-title {
+    font-size: 106px;
+    width: 544px;
+  }
+
+  .hero-text {
+    font-size: 28px;
+    width: 736px;
+  }
+
+  .hero-wrap-img {
+    order: 2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-10%);
+    z-index: 0;
+    margin-bottom: 25px;
+    margin-top: 132px;
+  }
+
+  .hero-image img {
+    width: 572px;
+  }
+}

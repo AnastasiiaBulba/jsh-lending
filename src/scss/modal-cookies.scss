@@ -1,0 +1,111 @@
+@import './common/vars';
+
+.is-hidden {
+  display: none;
+}
+
+.modal-cookies {
+  width: 375px;
+  height: 338px;
+  display: flex;
+  flex-direction: column;
+  background-color: $_blue;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.modal-cookies-text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-cookies-text {
+  width: 279px;
+  font-family: $_font3;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: $_white;
+  margin-bottom: 40px;
+}
+
+.modal-cookies-dop-btn {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.modal-cookies-accept,
+.modal-cookies-decline {
+  font-family: $_third-family;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+
+  all: unset;
+  cursor: pointer;
+  border-radius: 28px;
+  width: 265px;
+  height: 55px;
+  color: $_white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $_white;
+  position: relative;
+}
+
+.modal-cookies-accept:hover,
+.modal-cookies-decline:hover {
+  background-color: $_white;
+  color: $_black;
+}
+
+.modal-cookies-accept::after,
+.modal-cookies-decline::after {
+  background-color: $_white;
+  color: $_black;
+}
+
+@media screen and (min-width: 1440px) {
+  .modal-cookies {
+    width: 1262px;
+    height: 119px;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    align-items: center;
+  }
+
+  .modal-cookies-text-wrap {
+    margin-top: 40px;
+  }
+
+  .modal-cookies-text {
+    width: 622px;
+    text-align: left;
+  }
+
+  .modal-cookies-dop-btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .modal-cookies-accept {
+    margin-right: 26px;
+    margin-top: 20px;
+  }
+
+  .modal-cookies-decline {
+    margin-top: 20px;
+  }
+}

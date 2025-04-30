@@ -1,0 +1,84 @@
+@import './common/vars';
+
+.terms-policy-wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.terms-policy-section {
+  padding-top: 120px;
+}
+
+.terms-policy-title {
+  font-family: $_second-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #fff82a 20%, #ff3c00 75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(1px 0 0 $_black) drop-shadow(-1px 0 0 $_black)
+    drop-shadow(0 1px 0 $_black) drop-shadow(0 -1px 0 $_black)
+    drop-shadow(2px 4px 0 $_black);
+}
+
+.terms-policy-dop-wrap {
+  padding-top: 24px;
+}
+
+.terms-policy-parag {
+  font-family: $_font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-bottom: 24px;
+}
+
+.terms-policy-title-parag {
+  font-family: $_font-family;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-bottom: 24px;
+}
+
+.terms-policy-parag-dop {
+  font-family: $_font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.terms-policy-parag-one {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 1440px) {
+  .terms-policy-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .terms-policy-title {
+    font-size: 56px;
+  }
+
+  .terms-policy-parag {
+    font-size: 18px;
+  }
+
+  .terms-policy-title-parag {
+    font-size: 20px;
+  }
+
+  .terms-policy-parag-dop {
+    font-size: 18px;
+  }
+
+  .terms-policy-parag-one {
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,52 @@
+@import './common/vars';
+
+.is-hidden {
+  background: none;
+  display: none;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: $_orange;
+  width: 375px;
+  height: 368px;
+  display: flex;
+  text-align: center;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  margin-top: 80px;
+  position: relative;
+  z-index: 1000;
+}
+
+.modal-nav {
+  padding-top: 16px;
+}
+
+.modal-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  position: relative;
+  color: $_white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.modal-nav-link {
+  font-family: $_second-family;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  color: $_black;
+}
